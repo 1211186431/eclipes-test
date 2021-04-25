@@ -10,14 +10,19 @@ public class Menu {
     	 list=new LinkedList<Command>();
      }
      public void setCommand(Command command) {
+    	 this.list.add(command);
     	 this.command=command;
      }
      public void startExecute() {
-    	 this.command.execute();
-    	 this.list.add(command);
+    	 for(int i=0;i<list.size();i++) {
+    		 list.get(i).execute();
+    	 } 	 
      }
      public void updo() {
-    	 this.command.undo();
-    	 this.list.remove();
+    	 this.list.remove(this.list.size()-1).undo();
      }
+	public LinkedList<Command> getList() {
+		return list;
+	}
+     
 }

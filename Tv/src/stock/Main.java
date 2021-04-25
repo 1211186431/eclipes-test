@@ -4,9 +4,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-       Buyer buyerA=new BuyerA();
+       
        Stock stockA=new StockA(100);
-       stockA.addBuyer(buyerA);
+       Buyer buyerA=new BuyerA(stockA);
+       stockA.setPrice(101);
+       stockA.setPrice(120);
        stockA.setPrice(200);    		   
 	}
 

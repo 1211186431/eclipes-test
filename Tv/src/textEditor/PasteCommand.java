@@ -11,12 +11,14 @@ public class PasteCommand implements Command {
 	public void execute() {
 		// TODO Auto-generated method stub
        this.boradSvreen.paste();
+       this.boradSvreen.save("paste");
 	}
 
 	@Override
 	public void undo() {
 		// TODO Auto-generated method stub
 		System.out.println("undo paste");
+		 this.boradSvreen.save("updo paste");
 	}
 
 }

@@ -11,16 +11,18 @@ public class Main {
         Menu fileMenu=new Menu();
         Menu editMenu=new Menu();
         fileMenu.setCommand(openCommand);
-        fileMenu.startExecute();
-        
+        //fileMenu.startExecute();
+        fileMenu.setCommand(openCommand);
         fileMenu.setCommand(createCommand);
         fileMenu.startExecute();
         fileMenu.updo();
+        
         editMenu.setCommand(copyCommand);
-        editMenu.startExecute();
+        //editMenu.startExecute();
         
         editMenu.setCommand(pasteCommand);
         editMenu.startExecute();
+        
 	}
 
 }
